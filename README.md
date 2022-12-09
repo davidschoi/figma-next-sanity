@@ -10,7 +10,7 @@ Front End application using [React.js](https://reactjs.org/) for UI, [Next.js](h
 - Created my own React Components writing CSS in JS with Styled Components
 - Used Next.js for routing, image optimization, and everything else to help get my project production ready quickly
 - Sanity Studio running on localhost and deployed in the [cloud](https://www.sanity.io/docs/deployment).
-- Next.js deployed with the [Sanity Vercel Integration][integration].
+- Next.js deployed with the [Sanity Vercel Integration][https://www.sanity.io/docs/vercel-integration].
 
 ## Analytics
 
