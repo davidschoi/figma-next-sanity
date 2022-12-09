@@ -1,30 +1,55 @@
-import Container from './container'
-import { EXAMPLE_PATH } from '../lib/constants'
+import Link from 'next/link';
+import styled from 'styled-components';
+import Wrapper from './wrapper';
+
+const FooterStyles = styled.footer`
+  .footer-logo {
+    margin-bottom: 19px;
+  }
+
+  .logo {
+    margin-right: 9px;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+  }
+`;
 
 export default function Footer() {
   return (
-    <footer className="bg-accent-1 border-t border-accent-2">
-      <Container>
-        <div className="py-28 flex flex-col lg:flex-row items-center">
-          <h3 className="text-4xl lg:text-5xl font-bold tracking-tighter leading-tight text-center lg:text-left mb-10 lg:mb-0 lg:pr-4 lg:w-1/2">
-            Statically Generated with Next.js.
-          </h3>
-          <div className="flex flex-col lg:flex-row justify-center items-center lg:pl-4 lg:w-1/2">
-            <a
-              href="https://nextjs.org/docs/basic-features/pages"
-              className="mx-3 bg-black hover:bg-white hover:text-black border border-black text-white font-bold py-3 px-12 lg:px-8 duration-200 transition-colors mb-6 lg:mb-0"
-            >
-              Read Documentation
-            </a>
-            <a
-              href={`https://github.com/vercel/next.js/tree/canary/examples/${EXAMPLE_PATH}`}
-              className="mx-3 font-bold hover:underline"
-            >
-              View on GitHub
-            </a>
-          </div>
-        </div>
-      </Container>
-    </footer>
-  )
+    <FooterStyles>
+      <Wrapper>
+        <Link href="/" className="footer-logo">
+          <img src="/images/figma-logo-footer.svg" alt="Figma footer logo" />
+        </Link>
+        <ul className="social">
+          <li>
+            <Link href="">
+              <img src="/images/github-logo.svg" alt="GitHub logo" height={16} width={16} className="logo" />
+              <span>GitHub</span>
+            </Link>
+          </li>
+          <li>
+            <Link href="">
+              <img src="/images/linkedin-logo.svg" alt="LinkedIn logo" height={16} width={16} className="logo" />
+              <span>LinkedIn</span>
+            </Link>
+          </li>
+          <li>
+            <Link href="">
+              <img src="/images/twitter-logo.svg" alt="Twitter logo" height={16} width={16} className="logo" />
+              <span>Twitter</span>
+            </Link>
+          </li>
+        </ul>
+      </Wrapper>
+    </FooterStyles>
+  );
 }

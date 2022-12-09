@@ -1,15 +1,13 @@
 import Footer from '../components/footer';
 import Meta from '../components/meta';
-import Nav from './nav';
+import Header from './header';
 
 export default function Layout({ children }) {
   return (
     <>
       <Meta />
-      <Nav />
-      <div className="min-h-screen">
-        <main>{children}</main>
-      </div>
+      <Header />
+      <main>{children}</main>
       <Footer />
     </>
   );

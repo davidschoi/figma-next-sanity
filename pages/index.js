@@ -1,31 +1,25 @@
 import Head from 'next/head';
-import Container from '../components/container';
-import Intro from '../components/intro';
 import Layout from '../components/layout';
-import { indexQuery, benefitQuery } from '../lib/queries';
+import Hero from '../components/hero';
+import { benefitQuery } from '../lib/queries';
 import { usePreviewSubscription } from '../lib/sanity';
 import { getClient, overlayDrafts } from '../lib/sanity.server';
+import Benefits from '../components/benefits';
 
-export default function Index({ allPosts: initialAllBenefits, preview }) {
+export default function Index({ allBenefits: initialAllBenefits, preview }) {
   const { data: allBenefits } = usePreviewSubscription(benefitQuery, {
     initialData: initialAllBenefits,
     enabled: preview,
   });
   const benefits = allBenefits || [];
   return (
-    <>
-      <Layout preview={preview}>
-        <Head>
-          <title>David at Figma</title>
-        </Head>
-        <Container>
-          <Intro />
-          {benefits.map((benefit) => (
-            <div>{benefit.description}</div>
-          ))}
-        </Container>
-      </Layout>
-    </>
+    <Layout preview={preview}>
+      <Head>
+        <title>David at Figma</title>
+      </Head>
+      <Hero />
+      <Benefits benefits={benefits} />
+    </Layout>
   );
 }
 
