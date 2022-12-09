@@ -12,9 +12,15 @@ Front End application using [React.js](https://reactjs.org/) for UI, [Next.js](h
 - Sanity Studio running on localhost and deployed in the [cloud](https://www.sanity.io/docs/deployment).
 - Next.js deployed with the [Sanity Vercel Integration][integration].
 
-## Lighthouse Scores
+## Analytics
+
+### Lighthouse Scores 
 
 ![Lighthouse Score Screenshot](./docs/lighthouse-scores.png)
+
+### Web Vitals
+
+![Vercel Analytics](./docs/vercel-analytics.png)
 
 ## Dev Setup
 
