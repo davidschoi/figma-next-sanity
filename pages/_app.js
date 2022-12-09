@@ -25,6 +25,34 @@ const GlobalStyle = createGlobalStyle`
 		src: url('/fonts/Whyte-Bold.otf') format('opentype')
 	}
 
+	:root {
+		--vh: 1vh;
+    --h1-fs: 64px;
+    --h1-lh: 1.15;
+    --h1-ls: -0.03em;
+    --h2-fs: 36px;
+    --h2-lh: 1.2;
+    --h2-ls: -0.02em;
+    --h3-fs: 24px;
+    --h3-ls: -0.01em;
+    --h4-fs: 20px;
+    --t1-fs: 22px;
+    --t1-lh: 1.45;
+    --t1-ls: 0em;
+    --t2-fs: 18px;
+    --t2-ls: 0.01em;
+    --t3-fs: 16px;
+    --t3-ls: 0.01em;
+    --legoBlockPadding: 160px;
+	}
+
+	html {
+		--columns: 24;
+    --gutter: 0px;
+    --col-width: calc((min(100vw, 1440px) - 2 * var(--gutter)) / var(--columns));
+    --inktrap-font-family: "Whyte Inktrap",Whyte,sans-serif;
+	}
+
   body {
 		box-sizing: border-box;
     margin: 0;

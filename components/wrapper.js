@@ -6,8 +6,8 @@ const WrapperStyles = styled.div`
   padding: 120px 20px;
 `;
 
-function Wrapper({ children }) {
-  return <WrapperStyles>{children}</WrapperStyles>;
+function Wrapper({ children, ...props }) {
+  return <WrapperStyles {...props}>{children}</WrapperStyles>;
 }
 
 export default Wrapper;

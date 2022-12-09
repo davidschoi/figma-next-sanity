@@ -31,19 +31,19 @@ export default function Footer() {
         </Link>
         <ul className="social">
           <li>
-            <Link href="">
-              <img src="/images/github-logo.svg" alt="GitHub logo" height={16} width={16} className="logo" />
-              <span>GitHub</span>
-            </Link>
-          </li>
-          <li>
-            <Link href="">
+            <Link href="https://www.linkedin.com/in/greatgumz/" target="_blank">
               <img src="/images/linkedin-logo.svg" alt="LinkedIn logo" height={16} width={16} className="logo" />
               <span>LinkedIn</span>
             </Link>
           </li>
           <li>
-            <Link href="">
+            <Link href="https://github.com/greatgumz" target="_blank">
+              <img src="/images/github-logo.svg" alt="GitHub logo" height={16} width={16} className="logo" />
+              <span>GitHub</span>
+            </Link>
+          </li>
+          <li>
+            <Link href="https://twitter.com/thegreatgumz" target="_blank">
               <img src="/images/twitter-logo.svg" alt="Twitter logo" height={16} width={16} className="logo" />
               <span>Twitter</span>
             </Link>

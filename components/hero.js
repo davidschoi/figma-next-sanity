@@ -34,6 +34,12 @@ const HeroStyles = styled.div`
   .cta {
     margin-top: 48px;
   }
+
+  .hero-image {
+    object-fit: cover;
+    width: 540px;
+    height: 540px;
+  }
 `;
 
 function Hero() {
@@ -51,7 +57,7 @@ function Hero() {
             See resume
           </Button>
         </div>
-        <Image src="/images/hero.jpg" alt="Hero image" width={540} height={540} priority />
+        <Image className="hero-image" src="/images/hero-davidchoi.jpg" alt="Hero image" width={540} height={720} priority />
       </HeroStyles>
     </Wrapper>
   );
